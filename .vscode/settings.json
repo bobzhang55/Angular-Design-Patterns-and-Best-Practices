@@ -1,9 +1,0 @@
-{
-  "typescriptFold.togglePerFile": false,
-  "typescriptFold.unfoldedOpacity": 0.6,
-  "typescriptFold.maskChar": "⋮",
-  "typescriptFold.maskColor": "#000",
-  "typescriptFold.supportedLanguages": ["javascriptreact", "Typescript"],
-  "typescriptFold.unfoldOnLineSelect": true,
-  "typescriptFold.autoFold": false
-}

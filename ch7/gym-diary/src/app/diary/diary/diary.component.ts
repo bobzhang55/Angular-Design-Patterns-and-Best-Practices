@@ -15,8 +15,8 @@ export class DiaryComponent implements OnInit {
   exerciseList!: ExerciseSetList;
 
   ngOnInit(): void {
-    this.route.data.subscribe(({ diaryApi }) => {
-      this.exerciseList = diaryApi.items;
+    this.route.data.subscribe((d) => {
+      this.exerciseList = d['diaryApi'].items;
     });
   }
 

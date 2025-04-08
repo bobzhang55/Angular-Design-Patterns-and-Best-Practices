@@ -17,14 +17,12 @@ export class ExerciseSetsService {
 
   getInitialList(): Observable<ExerciseSetList> {
     const headers = new HttpHeaders().set('X-TELEMETRY', 'true');
-    return this.httpClient
-      .get<ExerciseSetListAPI>(this.url, { headers })
+    return this.httpClient.get<ExerciseSetListAPI>(this.url, { headers })
       .pipe(map((api) => api?.items));
   }
 
   refreshList(): Observable<ExerciseSetList> {
-    return this.httpClient
-      .get<ExerciseSetListAPI>(this.url)
+    return this.httpClient.get<ExerciseSetListAPI>(this.url)
       .pipe(map((api) => api?.items));
   }
 

@@ -1,10 +1,9 @@
 import { Injectable, inject } from '@angular/core';
 import {
   ExerciseSet,
-  ExerciseSetList,
   ExerciseSetListAPI,
 } from '../interfaces/exercise-set';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({

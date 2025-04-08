@@ -13,12 +13,10 @@ import { AuthService } from './auth.service';
 export class AuthInterceptor implements HttpInterceptor {
   private authService = inject(AuthService);
 
-  intercept(
-    request: HttpRequest<unknown>,
-    next: HttpHandler
-  ): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+
     const token = this.authService.token;
-    
+
     if (request.url.includes('auth')) {
       return next.handle(request);
     }

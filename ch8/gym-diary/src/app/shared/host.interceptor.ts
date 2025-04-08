@@ -9,10 +9,8 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class HostInterceptor implements HttpInterceptor {
-  intercept(
-    request: HttpRequest<unknown>,
-    next: HttpHandler
-  ): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+
     const url = 'http://localhost:3000';
     const resource = request.url;
 

@@ -26,17 +26,9 @@ import { TelemetryInterceptor } from './telemetry/telemetry.interceptor';
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: HostInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: LoadInterceptor, multi: true },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: NotificationInterceptor,
-      multi: true,
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: TelemetryInterceptor,
-      multi: true,
-    },
+    { provide: HTTP_INTERCEPTORS, useClass: NotificationInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: TelemetryInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

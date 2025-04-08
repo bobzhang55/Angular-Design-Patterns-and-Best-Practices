@@ -1,7 +1,7 @@
 import { inject } from '@angular/core';
 import { ResolveFn } from '@angular/router';
 import { ExerciseSetsService } from './services/exercise-sets.service';
-import { ExerciseSet, ExerciseSetList, ExerciseSetListAPI } from './interfaces/exercise-set';
+import { ExerciseSet, ExerciseSetList } from './interfaces/exercise-set';
 
 export const diaryResolver: ResolveFn<ExerciseSetList> = (route, state) => {
   const exerciseSetsService = inject(ExerciseSetsService);

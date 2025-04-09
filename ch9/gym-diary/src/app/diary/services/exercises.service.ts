@@ -19,3 +19,37 @@ export class ExercisesService {
       .pipe(map((api) => api?.items));
   }
 }
+
+
+///==========Testing: http://localhost:3000/exercises?filter=pre =======
+/*
+{
+  "items": [
+    {
+      "id": "29",
+      "description": "Dumbbell Bench Press"
+    },
+    {
+      "id": "24",
+      "description": "Arnold Press"
+    },
+    {
+      "id": "11",
+      "description": "Incline Bench Press"
+    },
+    {
+      "id": "6",
+      "description": "Shoulder Press"
+    },
+    {
+      "id": "5",
+      "description": "Bench Press"
+    },
+    {
+      "id": "4",
+      "description": "Leg Press"
+    }
+  ],
+  "hasNext": false
+}
+*/

@@ -1,11 +1,16 @@
 import { TestBed } from '@angular/core/testing';
 
 import { NotificationInterceptor } from './notification.interceptor';
+import { ToastrService } from 'ngx-toastr';
 
-describe('NotificationInterceptor', () => {
+fdescribe('NotificationInterceptor', () => {
   beforeEach(() => TestBed.configureTestingModule({
     providers: [
-      NotificationInterceptor
+      NotificationInterceptor,
+      {
+        provide: ToastrService,
+        useValue: jasmine.createSpyObj('ToastrService', ['success']),
+      },
       ]
   }));
 

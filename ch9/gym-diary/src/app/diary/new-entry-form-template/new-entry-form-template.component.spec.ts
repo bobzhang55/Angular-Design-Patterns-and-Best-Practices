@@ -4,7 +4,7 @@ import { NewEntryFormTemplateComponent } from './new-entry-form-template.compone
 import { FormsModule } from '@angular/forms';
 import { ExerciseSetsService } from '../services/exercise-sets.service';
 
-fdescribe('NewEntryFormTemplateComponent', () => {
+describe('NewEntryFormTemplateComponent', () => {
   let component: NewEntryFormTemplateComponent;
   let fixture: ComponentFixture<NewEntryFormTemplateComponent>;
 

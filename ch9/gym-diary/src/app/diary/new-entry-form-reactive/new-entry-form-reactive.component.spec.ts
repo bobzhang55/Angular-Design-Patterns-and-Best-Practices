@@ -6,7 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExercisesService } from '../services/exercises.service';
 
-fdescribe('NewEntryFormReactiveComponent', () => {
+describe('NewEntryFormReactiveComponent', () => {
   let component: NewEntryFormReactiveComponent;
   let fixture: ComponentFixture<NewEntryFormReactiveComponent>;
 

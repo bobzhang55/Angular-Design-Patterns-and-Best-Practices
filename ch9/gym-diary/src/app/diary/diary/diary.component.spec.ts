@@ -6,7 +6,7 @@ import { NewItemButtonComponent } from '../new-item-button/new-item-button.compo
 import { ExerciseSetsService } from '../services/exercise-sets.service';
 import { RouterTestingModule } from '@angular/router/testing';
 
-fdescribe('ListEntriesComponent', () => {
+describe('ListEntriesComponent', () => {
   let component: DiaryComponent;
   let fixture: ComponentFixture<DiaryComponent>;
 
@@ -26,7 +26,7 @@ fdescribe('ListEntriesComponent', () => {
         },
       ],
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(DiaryComponent);
     component = fixture.componentInstance;

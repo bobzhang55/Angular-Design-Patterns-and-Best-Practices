@@ -4,7 +4,7 @@ import { HomeComponent } from './home.component';
 import { AuthService } from '../login/auth.service';
 import { RouterTestingModule } from '@angular/router/testing';
 
-fdescribe('HomeComponent', () => {
+describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 

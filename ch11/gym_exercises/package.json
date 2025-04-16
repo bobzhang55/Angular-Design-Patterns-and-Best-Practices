@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --single-bundle  --bundle-styles  --keep-styles  --output-hashing=none",
-    "serve-mfe": "http-server dist/gym_exercises",
+    "mfe": "http-server dist/gym_exercises",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

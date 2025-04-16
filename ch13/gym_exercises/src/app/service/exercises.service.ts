@@ -17,7 +17,7 @@ export class ExercisesService {
       .pipe(map((api) => api?.items));
   }
 
-  addExercises(exercises: Partial<Exercise>): Observable<Exercise> {
-    return this.httpClient.post<Exercise>(this.url, exercises);
+  addExercises(exercise: Partial<Exercise>): Observable<Exercise> {
+    return this.httpClient.post<Exercise>(this.url, exercise);
   }
 }

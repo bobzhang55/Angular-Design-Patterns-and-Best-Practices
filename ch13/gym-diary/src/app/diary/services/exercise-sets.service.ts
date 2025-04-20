@@ -19,6 +19,7 @@ export class ExerciseSetsService {
 
   getInitialList() {
     const headers = new HttpHeaders().set('X-TELEMETRY', 'true');
+    headers.set('X-LOADING', 'true');
     this.httpClient
       .get<ExerciseSetListAPI>(this.url, { headers })
       .pipe(map((api) => api?.items))

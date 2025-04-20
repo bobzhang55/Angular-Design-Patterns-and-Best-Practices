@@ -18,10 +18,7 @@ export class DiaryComponent implements OnInit {
   volume = computed<number>(() =>
     this.exerciseSetsService
       .exerciseList()
-      .reduce(
-        (volume, exerciseSet) => volume + exerciseSet.reps * exerciseSet.sets,
-        0
-      )
+      .reduce((volume, exerciseSet) => volume + exerciseSet.reps * exerciseSet.sets, 0)
   );
 
   ngOnInit(): void {

@@ -23,7 +23,7 @@ export class LoadInterceptor implements HttpInterceptor {
 
     this.loadService.showLoader();
     return next
-      .handle(request)
+      .handle(request).pipe(delay(2000))
       .pipe(finalize(() => this.loadService.hideLoader()));
   }
 }

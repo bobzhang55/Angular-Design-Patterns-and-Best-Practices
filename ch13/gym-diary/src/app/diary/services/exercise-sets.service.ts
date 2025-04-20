@@ -1,4 +1,4 @@
-import { Injectable, inject, signal } from '@angular/core';
+import { Injectable, WritableSignal, inject, signal } from '@angular/core';
 import {
   ExerciseSet,
   ExerciseSetList,
@@ -15,9 +15,9 @@ export class ExerciseSetsService {
 
   private url = 'diary';
 
-  exerciseList = signal<ExerciseSetList>([] as ExerciseSetList);
+  exerciseList: WritableSignal<ExerciseSetList> = signal<ExerciseSetList>([] as ExerciseSetList);
 
-  getInitialList() {
+  getInitialList(): void {
     const headers = new HttpHeaders().set('X-TELEMETRY', 'true');
     headers.set('X-LOADING', 'true');
     this.httpClient
@@ -30,7 +30,7 @@ export class ExerciseSetsService {
     return this.httpClient.post<ExerciseSet>(this.url, item);
   }
 
-  deleteItem(id: string) {
+  deleteItem(id: string): void {
     this.httpClient.delete<boolean>(`${this.url}/${id}`).subscribe(() => {
       this.exerciseList.update((list) =>
         list.filter((exerciseSet) => exerciseSet.id !== id)

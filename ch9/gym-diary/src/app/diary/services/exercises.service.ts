@@ -12,7 +12,7 @@ export class ExercisesService {
   private url = 'exercises';
 
   getExercises(filter?: string): Observable<ExerciseList> {
-    const headers = new HttpHeaders().set('X-LOADING', 'false');
+    const headers = new HttpHeaders().set('X-LOADING', 'true');
     filter = filter ? `?filter=${filter}` : '';
     return this.httpClient
       .get<ExerciseListAPI>(`${this.url}${filter}`, { headers })
